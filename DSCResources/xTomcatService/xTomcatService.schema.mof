@@ -1,0 +1,8 @@
+[ClassVersion("1.0.0.0"), FriendlyName("xTomcatService")]
+class xTomcatService : OMI_BaseResource
+{
+    [Key, Description("CATALINA_BASE")] String CatalinaBase;
+    [Key, Description("CATALINA_HOME")] String CatalinaHome;
+    [Key, Description("JAVA_HOME")] String JavaHome;
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+};
